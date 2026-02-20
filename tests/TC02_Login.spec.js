@@ -2,7 +2,7 @@ const {test, expect} = require('@playwright/test');//importing the required libr
 const {HomePage} = require('../pages/HomePage');//importing HomePage. Variable is HomePage
 const {LoginPage} = require('../pages/LoginPage');
 const {AccountPage} = require('../pages/AccountPage'); 
-const dataset = JSON.parse(JSON.stringify(require('../Utils/CloudBerryStoreTestData.json')));//importing the dataset JSON File
+const dataset = JSON.parse(JSON.stringify(require('../utils/CloudBerryStoreTestData.json')));//importing the dataset JSON File
 const users = dataset.Sheet1; //get datasheet from Sheet1, which is the name of the array
 
 
