@@ -5,8 +5,7 @@ const {AccountPage} = require('../pages/AccountPage');
 const {AffiliatePage} = require('../pages/AffiliatePage');
 
 
-{test('@regression TC06_AddAfiiliate', async ({page}) =>
-{
+test('@regression TC06_AddAfiiliate', async ({page}) => {
     const home = new HomePage(page);
     const login = new LoginPage(page);
     const account = new AccountPage(page);
@@ -24,5 +23,4 @@ const {AffiliatePage} = require('../pages/AffiliatePage');
     await affiliate.enterChequePayeeName('Apple Jack');
     await affiliate.clickContinue();
     await expect(affiliate.successMessage).toContainText("Success");
-})
-    };
+});

@@ -3,8 +3,8 @@ const {HomePage} = require('../pages/HomePage');//importing HomePage. Variable i
 const {CategoryPage} = require('../pages/CategoryPage');
 const {ProductPage} = require('../pages/ProductPage'); 
 
-{test('@sanity @regression TC03_AddToCart', async ({page}) => 
-{
+test('@sanity @regression TC03_AddToCart', async ({page}) => {
+
     const home = new HomePage(page);
     const category = new CategoryPage(page);
     const product = new ProductPage(page);
@@ -16,5 +16,4 @@ const {ProductPage} = require('../pages/ProductPage');
     await product.clickAddToCart();
     await expect(product.successAlert).toContainText("Success");
 
-})
-    };
+});

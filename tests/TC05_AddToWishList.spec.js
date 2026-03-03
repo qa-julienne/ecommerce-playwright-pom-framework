@@ -5,8 +5,7 @@ const {AccountPage} = require('../pages/AccountPage');
 const {CategoryPage} = require('../pages/CategoryPage');
 const {ProductPage} = require('../pages/ProductPage'); 
 
-{test('@regression TC05_AddToWishList', async ({page}) =>
-{
+test('@regression TC05_AddToWishList', async ({page}) => {
     const home = new HomePage(page);
     const login = new LoginPage(page);
     const account = new AccountPage(page);
@@ -23,5 +22,4 @@ const {ProductPage} = require('../pages/ProductPage');
     await product.clickAddToWishList();
     await expect(product.successAlert).toContainText("Success");
 
-    })
-    };
+    });

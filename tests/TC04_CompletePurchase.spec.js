@@ -5,8 +5,8 @@ const {ProductPage} = require('../pages/ProductPage');
 const {LoginPage} = require('../pages/LoginPage');
 const {CheckoutPage} = require('../pages/CheckoutPage');
 
-{test('@sanity @regression TC04_CompletePurchase', async ({page}) =>
-{
+test('@sanity @regression TC04_CompletePurchase', async ({page}) => {
+
     const home = new HomePage(page);
     const category = new CategoryPage(page);
     const product = new ProductPage(page);
@@ -28,5 +28,4 @@ const {CheckoutPage} = require('../pages/CheckoutPage');
     await checkout.selectPaymentMethod();
     await checkout.clickConfirmOrder();
     await expect(checkout.confirmationMessage).toContainText("Your order has been placed!");
-})
-    };
+});
